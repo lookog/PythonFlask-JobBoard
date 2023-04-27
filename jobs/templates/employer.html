@@ -1,4 +1,4 @@
-{% extends "layout.html" %}}
+{% extends "layout.html" %}
 {% block content %}
 <div>
   <h1>
@@ -29,9 +29,6 @@
               <small>- {{ review['date']  }}</small>
               <br>
               {{ review['review'] }}
-    status
-    date
-    review
             </p>
           </div>
         </div>
@@ -40,7 +37,8 @@
    {% endfor %}
   <div class="columns">
     <div class="column">
-      <a class="button is-info is-pulled-right">Create Review</a>
+      <a class="button is-info is-pulled-right"
+         href="{{ url_for('review', employer_id=employer['id']) }}">Create Review</a>
     </div>
   </div>
 {% endblock %}
